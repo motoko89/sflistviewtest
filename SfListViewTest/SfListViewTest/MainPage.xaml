@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SfListViewTest" x:Class="SfListViewTest.MainPage"
+             xmlns:sf="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <sf:SfListView
+            x:Name="SearchInspectionList"
+            ItemSpacing="0"
+            SelectionMode="SingleDeselect"
+            Margin="0,15,0,0"
+            SelectionBackgroundColor="Lime"
+            Grid.Row="1"
+            AutoFitMode="Height"
+            >
+            <sf:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical"
+                             Spacing="0"
+                             Padding="20,5,15,5"
+                             VerticalOptions="Start">
+                            <Label Text="Test1"
+                                   LineBreakMode="TailTruncation" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </sf:SfListView.ItemTemplate>
+        </sf:SfListView>
+    </Grid>
+</ContentPage>
